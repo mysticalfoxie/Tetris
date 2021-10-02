@@ -50,7 +50,6 @@ void forceDown();
 void drawField();
 void flush();
 void drawTetromino();
-bool causesCollision();
 
 int main()
 {
@@ -82,8 +81,8 @@ void initializeField() {
 
 bool isBorder(int x, int y) {
     if (x == 0) return true;
-    if (x == nFieldWidth - 1) return true;
-    if (y == nFieldHeight - 1) return true;
+    if (x == nFieldWidth) return true;
+    if (y == nFieldHeight) return true;
 
     return false;
 }
@@ -137,10 +136,6 @@ void doInputReading() {
 }
 
 void doGameLogic() {
-
-}
-
-bool causesCollision() {
 
 }
 
